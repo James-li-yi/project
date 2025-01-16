@@ -9,7 +9,7 @@ st.title(":seedling: US Crime in 2016")
 
 
 # data import and prep
-dfcrime = pd.read_csv(r"C:\Users\admin\USCrime.csv")
+dfcrime = pd.read_csv("USCrime.csv")
 dfcrime_2016 = dfcrime.loc[dfcrime['year']==2016]
 df = dfcrime_2016.loc[~(dfcrime_2016['State'] == 'DC') & ~(dfcrime_2016['State'] == 'All')]
 df.drop("year", axis=1, inplace=True)
